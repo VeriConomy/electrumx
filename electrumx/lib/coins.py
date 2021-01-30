@@ -3889,4 +3889,4 @@ class Vericoin(Coin):
     TX_COUNT = 7723488
     TX_COUNT_HEIGHT = 3861744
     TX_PER_BLOCK = 2
-    RPC_PORT = 33987
+    RPC_PORT = 58683
