@@ -3856,3 +3856,20 @@ class Quebecoin(AuxPowMixin, Coin):
     TX_PER_BLOCK = 20
     REORG_LIMIT = 2000
     RPC_PORT = 10890
+    
+class Verium(Coin):
+    NAME = "Verium"
+    SHORTNAME = "VRM"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("e3ccbb92")
+    XPRV_VERBYTES = bytes.fromhex("e3ccae01")
+    P2PKH_VERBYTE = bytes.fromhex("46")
+    P2SH_VERBYTES = (bytes.fromhex("84"),)
+    WIF_BYTE = bytes.fromhex("C6")
+    DESERIALIZER = lib_tx.DeserializerTxTime
+    GENESIS_HASH = ('8232c0cf3bd7e05546e3d7aaaaf89fed'
+                    '8bc97c4df1a8c95e9249e13a2734932b')
+    TX_COUNT = 1000
+    TX_COUNT_HEIGHT = 547375
+    TX_PER_BLOCK = 1
+    RPC_PORT = 33987
