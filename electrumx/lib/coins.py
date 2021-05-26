@@ -3890,3 +3890,9 @@ class Vericoin(Coin):
     TX_COUNT_HEIGHT = 3861744
     TX_PER_BLOCK = 2
     RPC_PORT = 58683
+
+    @classmethod
+    def header_hash(cls, header):
+        # Requires OpenSSL 1.1.0+
+        from hashlib import scrypt
+        return scrypt(header, salt=header, n=1024, r=1, p=1, dklen=32)
